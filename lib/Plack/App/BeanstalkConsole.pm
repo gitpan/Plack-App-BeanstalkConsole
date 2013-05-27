@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.002';
+  $Plack::App::BeanstalkConsole::VERSION = '0.003';
 }
-# git description: v0.001-4-g501dbeb
+# git description: v0.002-2-g44ce9ad
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -32,6 +32,10 @@ sub call
 {
     my ($self, $env) = @_;
 
+    # / -> /public/
+    $env->{PATH_INFO} = '/public/' if $env->{PATH_INFO} eq '/';
+
+    # */ -> */index.php
     $env->{PATH_INFO} .= 'index.php'
         if substr($env->{PATH_INFO}, -1, 1) eq '/';
 
@@ -54,7 +58,7 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -82,6 +86,9 @@ and Сергей Лысенко (Sergey Lysenko).
 The latest version of the application is downloaded at install time and saved
 as a L<File::ShareDir|share dir>, which is used by default if the C<root> is
 not overridden (see below).
+
+To use, mount the app on your server and go to the '/' URI,
+where you will be prompted to enter the address of your beanstalk server(s).
 
 =head1 METHODS
 

@@ -68,7 +68,7 @@
    "provides" : {
       "Plack::App::BeanstalkConsole" : {
          "file" : "lib/Plack/App/BeanstalkConsole.pm",
-         "version" : "0.002"
+         "version" : "0.003"
       }
    },
    "release_status" : "stable",
@@ -84,7 +84,7 @@
          "web" : "https://github.com/karenetheridge/Plack-App-BeanstalkConsole"
       }
    },
-   "version" : "0.002",
+   "version" : "0.003",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019000"
@@ -375,6 +375,11 @@
             "class" : "Dist::Zilla::Plugin::NoAutomatedTesting",
             "name" : "NoAutomatedTesting",
             "version" : "0.06"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::Test::Kwalitee",
+            "name" : "Test::Kwalitee",
+            "version" : "2.03"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
