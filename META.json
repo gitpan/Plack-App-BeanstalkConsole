@@ -68,7 +68,7 @@
    "provides" : {
       "Plack::App::BeanstalkConsole" : {
          "file" : "lib/Plack/App/BeanstalkConsole.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
    "release_status" : "stable",
@@ -84,7 +84,7 @@
          "web" : "https://github.com/karenetheridge/Plack-App-BeanstalkConsole"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019000"
@@ -290,11 +290,6 @@
             "class" : "Dist::Zilla::Plugin::ReadmeAnyFromPod",
             "name" : "@Author::ETHER/ReadmeAnyFromPod",
             "version" : "0.120120"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::MakeMaker",
-            "name" : "@Author::ETHER/MakeMaker",
-            "version" : "4.300034"
          },
          {
             "class" : "Dist::Zilla::Plugin::InstallGuide",

@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.001';
+  $Plack::App::BeanstalkConsole::VERSION = '0.002';
 }
-# git description: 0606c47
+# git description: v0.001-4-g501dbeb
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -54,13 +54,13 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
     use Plack::App::BeanstalkConsole;
     # accessable under /...
-    my $app = Plack::App::Console->new->to_app;
+    my $app = Plack::App::BeanstalkConsole->new->to_app;
 
     # Or mount on a specific path
     use Plack::Builder;

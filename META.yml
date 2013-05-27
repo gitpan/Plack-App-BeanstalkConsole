@@ -32,7 +32,7 @@ no_index:
 provides:
   Plack::App::BeanstalkConsole:
     file: lib/Plack/App/BeanstalkConsole.pm
-    version: 0.001
+    version: 0.002
 requires:
   File::ShareDir: 0
   Plack::App::PHPCGIFile: 0
@@ -45,7 +45,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Plack-App-BeanstalkConsole
   homepage: https://github.com/karenetheridge/Plack-App-BeanstalkConsole
   repository: https://github.com/karenetheridge/Plack-App-BeanstalkConsole.git
-version: 0.001
+version: 0.002
 x_Dist_Zilla:
   perl:
     version: 5.019000
@@ -210,10 +210,6 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
       name: '@Author::ETHER/ReadmeAnyFromPod'
       version: 0.120120
-    -
-      class: Dist::Zilla::Plugin::MakeMaker
-      name: '@Author::ETHER/MakeMaker'
-      version: 4.300034
     -
       class: Dist::Zilla::Plugin::InstallGuide
       name: '@Author::ETHER/InstallGuide'
