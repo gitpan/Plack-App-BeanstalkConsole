@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.003';
+  $Plack::App::BeanstalkConsole::VERSION = '0.004';
 }
-# git description: v0.002-2-g44ce9ad
+# git description: v0.003-1-g9657c24
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -33,7 +33,9 @@ sub call
     my ($self, $env) = @_;
 
     # / -> /public/
-    $env->{PATH_INFO} = '/public/' if $env->{PATH_INFO} eq '/';
+    # CSS is screwed up if we rewrite PATH_INFO directly here.
+    return [ '301', [ 'Location' => '/public/' ], [] ]
+        if $env->{PATH_INFO} eq '/';
 
     # */ -> */index.php
     $env->{PATH_INFO} .= 'index.php'
@@ -58,7 +60,7 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 

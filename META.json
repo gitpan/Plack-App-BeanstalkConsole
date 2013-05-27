@@ -68,7 +68,7 @@
    "provides" : {
       "Plack::App::BeanstalkConsole" : {
          "file" : "lib/Plack/App/BeanstalkConsole.pm",
-         "version" : "0.003"
+         "version" : "0.004"
       }
    },
    "release_status" : "stable",
@@ -84,7 +84,7 @@
          "web" : "https://github.com/karenetheridge/Plack-App-BeanstalkConsole"
       }
    },
-   "version" : "0.003",
+   "version" : "0.004",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.019000"

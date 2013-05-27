@@ -1,7 +1,10 @@
 Revision history for Plack-App-BeanstalkConsole
 
+0.004     2013-05-27 12:07:05 PDT-0700 (Karen Etheridge)
+          - fix '/' URI redirection - direct mapping confuses CSS
+
 0.003     2013-05-27 11:23:03 PDT-0700 (Karen Etheridge)
-          - the '/' URL is now mapped to '/public/', to avoid a bit of newbie
+          - the '/' URI is now mapped to '/public/', to avoid a bit of newbie
             confusion
 
 0.002     2013-05-26 17:32:41 PDT-0700 (Karen Etheridge)
