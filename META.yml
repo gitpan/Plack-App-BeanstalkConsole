@@ -18,7 +18,7 @@ configure_requires:
   File::Temp: 0
   HTTP::Tiny: 0
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.131490'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -32,7 +32,7 @@ no_index:
 provides:
   Plack::App::BeanstalkConsole:
     file: lib/Plack/App/BeanstalkConsole.pm
-    version: 0.004
+    version: 0.005
 requires:
   File::ShareDir: 0
   Plack::App::PHPCGIFile: 0
@@ -45,7 +45,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=Plack-App-BeanstalkConsole
   homepage: https://github.com/karenetheridge/Plack-App-BeanstalkConsole
   repository: https://github.com/karenetheridge/Plack-App-BeanstalkConsole.git
-version: 0.004
+version: 0.005
 x_Dist_Zilla:
   perl:
     version: 5.019000
@@ -274,6 +274,10 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ETHER/ConfirmRelease'
       version: 4.300034
+    -
+      class: inc::RequireExecutable
+      name: '=inc::RequireExecutable'
+      version: ~
     -
       class: Dist::Zilla::Plugin::NoAutomatedTesting
       name: NoAutomatedTesting

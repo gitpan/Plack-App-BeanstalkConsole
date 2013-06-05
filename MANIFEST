@@ -8,6 +8,7 @@ Makefile.PL
 README
 dist.ini
 inc/DownloadShareDirContent.pm
+inc/RequireExecutable.pm
 lib/Plack/App/BeanstalkConsole.pm
 t/00-check-deps.t
 t/00-compile.t

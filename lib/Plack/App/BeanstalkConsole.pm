@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.004';
+  $Plack::App::BeanstalkConsole::VERSION = '0.005';
 }
-# git description: v0.003-1-g9657c24
+# git description: v0.004-4-gd7b5b90
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -52,7 +52,7 @@ __END__
 
 =encoding utf-8
 
-=for :stopwords Karen Etheridge Petr Sergey Trofimov irc
+=for :stopwords Karen Etheridge Petr Sergey Trofimov irc beanstalkd
 
 =head1 NAME
 
@@ -60,7 +60,7 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.004
+version 0.005
 
 =head1 SYNOPSIS
 
@@ -130,11 +130,25 @@ I am also usually active on irc, as 'ether' at C<irc.perl.org>.
 
 =head1 SEE ALSO
 
+=over 4
+
+=item *
+
 L<Plack>
+
+=item *
 
 L<Plack::App::PHPCGIFile>
 
+=item *
+
 L<Beanstalk Console|https://github.com/ptrofimov/beanstalk_console>
+
+=item *
+
+L<beanstalkd|http://kr.github.com/beanstalkd>
+
+=back
 
 =head1 AUTHOR
 
