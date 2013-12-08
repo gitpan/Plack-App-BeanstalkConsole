@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.005';
+  $Plack::App::BeanstalkConsole::VERSION = '0.006';
 }
-# git description: v0.004-4-gd7b5b90
+# git description: v0.005-17-g871357f
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -15,6 +15,7 @@ use parent 'Plack::App::PHPCGIFile';
 
 use File::ShareDir;
 use Scalar::Util 'blessed';
+use namespace::autoclean;
 
 sub prepare_app
 {
@@ -50,7 +51,7 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
 =for :stopwords Karen Etheridge Petr Sergey Trofimov irc beanstalkd
 
@@ -60,18 +61,18 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
     use Plack::App::BeanstalkConsole;
-    # accessable under /...
+    # accessible under /...
     my $app = Plack::App::BeanstalkConsole->new->to_app;
 
     # Or mount on a specific path
     use Plack::Builder;
     builder {
-        # accessable under /beanstalk/...
+        # accessible under /beanstalk/...
         mount beanstalk => Plack::App::BeanstalkConsole->new;
     };
 
@@ -94,9 +95,7 @@ where you will be prompted to enter the address of your beanstalk server(s).
 
 =head1 METHODS
 
-=over 4
-
-=item * C<new>
+=head2 C<new>
 
     Plack::App::BeanstalkConsole->new(<options>)
 
@@ -112,8 +111,6 @@ contains the PHP code to be mounted. (In this way it functions just like
 L<Plack::App::PHPCGIFile>.)
 
     Plack::App::BeanstalkConsole->new(root => 'path/to/beanstalk_console')
-
-=back
 
 =back
 
