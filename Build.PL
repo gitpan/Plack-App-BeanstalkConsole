@@ -1,5 +1,6 @@
+exit 0 if $ENV{AUTOMATED_TESTING};
 use File::Which;
-do { print "php-cgi not found; aborting.\n"; exit 0 } if not which("php-cgi");
+die "php-cgi not found; aborting" if not which("php-cgi");
 # begin inc::DownloadShareDirContent (1)
 use File::Spec;
 use File::Temp 'tempdir';

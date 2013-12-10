@@ -2,9 +2,9 @@ use strict;
 use warnings;
 package Plack::App::BeanstalkConsole;
 {
-  $Plack::App::BeanstalkConsole::VERSION = '0.006';
+  $Plack::App::BeanstalkConsole::VERSION = '0.007';
 }
-# git description: v0.005-17-g871357f
+# git description: v0.006-2-g45485a2
 
 BEGIN {
   $Plack::App::BeanstalkConsole::AUTHORITY = 'cpan:ETHER';
@@ -61,7 +61,7 @@ Plack::App::BeanstalkConsole - a web application that provides access to Beansta
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
 =head1 SYNOPSIS
 
